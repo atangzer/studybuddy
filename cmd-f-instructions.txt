@@ -4,10 +4,22 @@
 localhost:8080 -> Backend API 
 localhost:3000 -> Frontend 
 
+Both containers need to be online in order to send data back and forth through containers
+Make sure you don't have anything else on port 8080 or 3000 when launching the app components
+
+RUN APP VIA DOCKER:
+    docker compose build && docker compose up
+    Access localhost:8080 and localhost:3000 for webapp components
+
+RUN APP LOCALLY:
+
 To run frontend: 
     cd studybuddy
+    npm i 
     npm start
 
 To run backend:
     cd server
+    npm i 
     node app.js
+
