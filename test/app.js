@@ -49,6 +49,14 @@ describe('GET /contact', () => {
   });
 });
 
+describe('GET /pomodoro', () => {
+  it('should return 200 OK', (done) => {
+    request(app)
+      .get('/pomodoro')
+      .expect(200, done);
+  });
+});
+
 describe('GET /api/lastfm', () => {
   it('should return 200 OK', (done) => {
     request(app)
