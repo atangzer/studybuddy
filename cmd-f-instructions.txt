@@ -1,0 +1,13 @@
+./server -> All backend/server related files (i.e. API, authentication)
+./studybuddy -. All frontend/react files
+
+localhost:8080 -> Backend API 
+localhost:3000 -> Frontend 
+
+To run frontend: 
+    cd studybuddy
+    npm start
+
+To run backend:
+    cd server
+    node app.js
