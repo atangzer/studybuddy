@@ -1,0 +1,36 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: ${PROJECT_NAME}
+spec:
+  selector:
+    app: ${PROJECT_NAME}
+  ports:
+  - protocol: TCP
+    port: 8080
+    targetPort: 8080
+  type: LoadBalancer
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ${PROJECT_NAME}
+  labels:
+    app: ${PROJECT_NAME}
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: ${PROJECT_NAME}
+  template:
+    metadata:
+      labels:
+        app: ${PROJECT_NAME}
+    spec:
+      containers:
+      - name: ${PROJECT_NAME}
+        image: gcr.io/${GOOGLE_PROJECT_ID}/${PROJECT_NAME}
+        ports:
+        - name: http
+          containerPort: 8080
+          protocol: TCP

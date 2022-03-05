@@ -1,0 +1,19 @@
+version: '3'
+services:
+  mongo:
+    image: mongo:3.6
+  web:
+    build: .
+    image: gcr.io/gleaming-idiom-343203/comfywebapp
+    ports:
+     - "8080:8080"
+    environment:
+     - MONGODB_URI=mongodb://mongo:27017/test 
+    links:
+     - mongo 
+    depends_on: 
+     - mongo 
+    volumes:
+     - .:/starter
+     - /starter/node_modules
+     
