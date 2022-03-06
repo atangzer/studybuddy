@@ -6,18 +6,22 @@ import './App.css';
 import Navbar from "./components/Navbar.js"
 import BottledMessage from './components/BottledMessage';
 import MsgDialog from './components/MsgDialog';
+import MascotTail, {MascotLookAround, MascotJumping, MascotJumpingLook, MascotTailScared, MascotSnooze, MascotSploot, MascotAnimation} from './components/Mascot';
+import Timer from './components/Timer';
 
 const App = () => {
 
   return (
     <div className="App">
         <Navbar />
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <MsgDialog />
+        <div className='App-pomodoro'>
+          <Timer />
+          </div>
+          <MsgDialog />
         <BottledMessage />
+        <div className='App-mascot'>
+          <MascotAnimation />
+        </div>
     </div>
   );
 }

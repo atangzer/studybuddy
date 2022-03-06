@@ -98,9 +98,7 @@ const MessageForm = () => {
                             Message Sent!
                         </Alert>
                     </Snackbar>
-
-                    {/* <button onClick={onClick}>Click</button>
-                    { showMessage ? <p>{message}</p>: null} */}
+ 
                 </CardContent>
             </Card>
         </Box>

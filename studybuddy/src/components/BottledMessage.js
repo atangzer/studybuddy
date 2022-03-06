@@ -6,10 +6,7 @@ import InputMessage from './MessageForm';
 
 const BottledMessage = () => {
     const [showBottle, setShowBottle] = React.useState(false)
-
-    const onClick = () => {
-    }
-
+    
     return (
         <Box>
             <InputMessage />
