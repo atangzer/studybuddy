@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-// import Clock from 'react-live-clock';
+import Clock from 'react-live-clock';
 
 export default class Navbar extends Component {
     render() {
@@ -14,9 +14,9 @@ export default class Navbar extends Component {
                             Study Buddy
                         </Typography>
 
-                        {/* <Typography variant="h7" color="inherit" component="div">
+                        <Typography variant="h7" color="inherit" component="div">
                             <Clock format={'dddd, MMMM Mo, YYYY, h:mm:ss A'} ticking={true} timezone={'US/Pacific'} />
-                        </Typography> */}
+                        </Typography>
                     </box>
                 </Toolbar>
             </AppBar>
