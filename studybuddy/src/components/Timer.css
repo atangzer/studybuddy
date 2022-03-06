@@ -3,7 +3,7 @@
 }
 
 .Timer-header {
-    background-color: #282c34;
+    /* background-color: #282c34; */
     width: 20em;
     min-height: 20em;
     display: flex;
@@ -11,17 +11,17 @@
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
-    color: white;
+    /* color: white; */
 }
 
 .Timer-button-div-top {
-    width: 10em;
+    width: 13em;
     display: flex;
     justify-content: space-between;
 }
 
 .Timer-button-div-bottom {
-    width: 7em;
+    width: 9em;
     display: flex;
     justify-content: space-between;
 }

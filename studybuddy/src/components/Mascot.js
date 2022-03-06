@@ -58,7 +58,14 @@ function MascotSploot() {
     );
 }
 
+function MascotAnimation() {
+    return (
+        <div className="Mascot">
+            <div className="Mascot-animation"></div>
+        </div>
+    );
+}
 
 
 export default MascotTail;
-export {MascotLookAround, MascotJumping, MascotJumpingLook, MascotTailScared, MascotSnooze, MascotSploot};
+export {MascotLookAround, MascotJumping, MascotJumpingLook, MascotTailScared, MascotSnooze, MascotSploot, MascotAnimation};

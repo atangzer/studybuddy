@@ -1,10 +1,12 @@
 .Mascot-tail {
     margin: auto;
+    position: absolute;
     height: 32px;
     width: 32px;
     transform: scale(3);
     background-image: url("./tile000.png");
     animation: Mascot-tail-waving steps(5) infinite 2s;
+    animation-delay: 0s;
 }
 
 @keyframes Mascot-tail-waving {
@@ -17,12 +19,15 @@
 }
 
 .Mascot-look-around {
+    background-color: yellowgreen;
     margin: auto;
+    position: absolute;
     height: 32px;
     width: 32px;
     transform: scale(3);
     background-image: url("./tile001.png");
     animation: Mascot-look-around steps(14) infinite 4s;
+    animation-delay: 0s;
 }
 
 @keyframes Mascot-look-around {
@@ -36,6 +41,7 @@
 
 .Mascot-jumping {
     margin: auto;
+    position: absolute;
     height: 32px;
     width: 32px;
     transform: scale(3);
@@ -54,6 +60,7 @@
 
 .Mascot-jumping-look {
     margin: auto;
+    position: absolute;
     height: 32px;
     width: 32px;
     transform: scale(3);
@@ -72,6 +79,7 @@
 
 .Mascot-tail-scared {
     margin: auto;
+    position: absolute;
     height: 32px;
     width: 32px;
     transform: scale(3);
@@ -90,6 +98,7 @@
 
 .Mascot-snooze{
     margin: auto;
+    position: absolute;
     height: 32px;
     width: 32px;
     transform: scale(3);
@@ -108,6 +117,7 @@
 
 .Mascot-sploot {
     margin: auto;
+    position: absolute;
     height: 32px;
     width: 32px;
     transform: scale(3);
@@ -121,5 +131,24 @@
     }
     to {
          background-position: -224px;
+    }
+}
+
+.Mascot-animation {
+    margin: auto;
+    position: absolute;
+    height: 32px;
+    width: 32px;
+    transform: scale(4);
+    background-image: url("./animation_1.png");
+    animation: Mascot-animation steps(35) infinite 11.25s;
+}
+
+@keyframes Mascot-animation {
+    from {
+         background-position: 0px;
+    }
+    to {
+         background-position: -1120px;
     }
 }
