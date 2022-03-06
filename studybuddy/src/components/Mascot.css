@@ -1,0 +1,125 @@
+.Mascot-tail {
+    margin: auto;
+    height: 32px;
+    width: 32px;
+    transform: scale(3);
+    background-image: url("./tile000.png");
+    animation: Mascot-tail-waving steps(5) infinite 2s;
+}
+
+@keyframes Mascot-tail-waving {
+    from {
+         background-position: 0px;
+    }
+    to {
+         background-position: -160px;
+    }
+}
+
+.Mascot-look-around {
+    margin: auto;
+    height: 32px;
+    width: 32px;
+    transform: scale(3);
+    background-image: url("./tile001.png");
+    animation: Mascot-look-around steps(14) infinite 4s;
+}
+
+@keyframes Mascot-look-around {
+    from {
+         background-position: 0px;
+    }
+    to {
+         background-position: -448px;
+    }
+}
+
+.Mascot-jumping {
+    margin: auto;
+    height: 32px;
+    width: 32px;
+    transform: scale(3);
+    background-image: url("./tile002.png");
+    animation: Mascot-jumping steps(8) infinite 2.25s;
+}
+
+@keyframes Mascot-jumping {
+    from {
+         background-position: 0px;
+    }
+    to {
+         background-position: -256px;
+    }
+}
+
+.Mascot-jumping-look {
+    margin: auto;
+    height: 32px;
+    width: 32px;
+    transform: scale(3);
+    background-image: url("./tile003.png");
+    animation: Mascot-jumping-look steps(11) infinite 3.5s;
+}
+
+@keyframes Mascot-jumping-look {
+    from {
+         background-position: 0px;
+    }
+    to {
+         background-position: -352px;
+    }
+}
+
+.Mascot-tail-scared {
+    margin: auto;
+    height: 32px;
+    width: 32px;
+    transform: scale(3);
+    background-image: url("./tile004.png");
+    animation: Mascot-tail-scared steps(5) infinite 3s;
+}
+
+@keyframes Mascot-tail-scared {
+    from {
+         background-position: 0px;
+    }
+    to {
+         background-position: -160px;
+    }
+}
+
+.Mascot-snooze{
+    margin: auto;
+    height: 32px;
+    width: 32px;
+    transform: scale(3);
+    background-image: url("./tile005.png");
+    animation: Mascot-snoozesteps(6) infinite 3s;
+}
+
+@keyframes Mascot-snooze{
+    from {
+         background-position: 0px;
+    }
+    to {
+         background-position: -192px;
+    }
+}
+
+.Mascot-sploot {
+    margin: auto;
+    height: 32px;
+    width: 32px;
+    transform: scale(3);
+    background-image: url("./tile006.png");
+    animation: Mascot-sploot steps(7) infinite 3s;
+}
+
+@keyframes Mascot-sploot {
+    from {
+         background-position: 0px;
+    }
+    to {
+         background-position: -224px;
+    }
+}
