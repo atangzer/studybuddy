@@ -10,9 +10,9 @@ export default class Navbar extends Component {
         return(
             <AppBar position='static' color='transparent'>
                 <Toolbar>
-                <IconButton>
+                {/* <IconButton>
                     <MenuIcon />
-                </IconButton>
+                </IconButton> */}
                 <Typography variant="h6" color="inherit" component="div">
                     Study Buddy
                 </Typography>
