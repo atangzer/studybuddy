@@ -39,7 +39,7 @@ docker compose up
 ```
 Access application at localhost:3000.
 
-Access this application on GCP as well: http://35.202.122.87:3000/
+Access this application on GCP as well: http://35.202.122.87:3000/ (**Note:** Please run the project on localhost:3000 instead, only the frontend is working at the moment on GCP)
 
 ## Credits
 
