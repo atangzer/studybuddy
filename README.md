@@ -18,10 +18,14 @@ For the pomodoro web application itself, we used the MERN stack (MongoDB, Expres
 
 The end product is deployed onto Google Cloud Platform (Google Kubernetes Engine) via CircleCI, and Docker was used to containerize the application into three seperate containers - the frontend, backend and database.
 
-The benefit of using CircleCI was to streamline our deployment onto production and consistently creating new releases.
+The benefit of using CircleCI was to streamline our deployment onto production and consistently creating new releases while minimizing downtime.
 
 <p align = 'center'>
   <img src = 'images/3.png'>
+</p>
+
+<p align = 'center'>
+  <img src = 'images/4.png'>
 </p>
 
 ## Launch Application via Docker
@@ -39,4 +43,4 @@ Access this application on GCP as well: http://35.202.122.87:3000/
 
 ## Credits
 
-We used a [boilerplate template](https://github.com/sahat/hackathon-starter/) for this project
+We used a [boilerplate template](https://github.com/sahat/hackathon-starter/) for this project.
