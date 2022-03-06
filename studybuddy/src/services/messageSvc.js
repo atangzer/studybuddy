@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const backendUrl = 'http://localhost:8080'
+const backendUrl = 'http://35.193.2.23:8080'
 
 const createMsg = async(msg) => {
     let res = {};
