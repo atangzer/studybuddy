@@ -2,7 +2,7 @@ version: 2
 jobs:
   build_and_test:
     docker:
-      - image: circleci/node:10
+      - image: circleci/node:14
     working_directory: ~/repo
     steps:
       - checkout
@@ -21,7 +21,9 @@ jobs:
     docker:
       - image: google/cloud-sdk
     environment:
-      - PROJECT_NAME: "comfywebapp"
+      - PROJECT_NAME: "studybuddy"
+      - FRONTEND: "sb_frontend"
+      - BACKEND: "sb_backend"
       - GOOGLE_PROJECT_ID: "gleaming-idiom-343203"
       - GOOGLE_COMPUTE_ZONE: "us-central1"
       - GOOGLE_CLUSTER_NAME: "prod"

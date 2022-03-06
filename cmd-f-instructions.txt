@@ -8,6 +8,7 @@ Both containers need to be online in order to send data back and forth through c
 Make sure you don't have anything else on port 8080 or 3000 when launching the app components
 
 RUN APP VIA DOCKER:
+    cd . (root directory)
     docker compose build && docker compose up
     Access localhost:8080 and localhost:3000 for webapp components
 
@@ -21,5 +22,5 @@ To run frontend:
 To run backend:
     cd server
     npm i 
-    node app.js
+    npm start
 
