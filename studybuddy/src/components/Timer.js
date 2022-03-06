@@ -3,6 +3,7 @@ import './Timer.css';
 import React, {useEffect, useState} from "react"; 
 
 import Button from "@mui/material/Button";
+import Typography from '@mui/material/Typography';
 
 function padLeadingZeros(num, size) {
   var s = num+"";
@@ -98,17 +99,22 @@ function Timer() {
   return (
     <div className="Timer">
         <header className='Timer-header'>
-            <h1>Pomodoro Timer</h1>
+            <Typography variant="h1" component="div" gutterBottom sx = {{color: 'white'}}>
+                Pomodoro Timer
+            </Typography>
             <div className='Timer-button-div-top'>
-                <Button variant='outlined' onClick={pomodoro}>Pomodoro</Button>
-                <Button variant='outlined' onClick={shortRest}>Short Rest</Button>
-                <Button variant='outlined' onClick={longRest}>Long Rest</Button>
+                <Button variant='contained' color='inherit' onClick={pomodoro}>Pomodoro</Button>
+                <Button variant='contained' color='inherit' onClick={shortRest}>Short Rest</Button>
+                <Button variant='contained' color='inherit' onClick={longRest}>Long Rest</Button>
             </div>
-            <h1>{parseInt(secondsLeft/60)}:{padLeadingZeros(secondsLeft%60, 2)}</h1>
+            <Typography variant="h1" component="div" gutterBottom sx = {{color: 'white'}}>
+              {parseInt(secondsLeft/60)}:{padLeadingZeros(secondsLeft%60, 2)}
+            </Typography>
+            {/* <h1>{parseInt(secondsLeft/60)}:{padLeadingZeros(secondsLeft%60, 2)}</h1> */}
             <div className='Timer-button-div-bottom'>
-                <Button variant='outlined' onClick={startTimer}>Start</Button>
-                <Button variant='outlined' onClick={stopTimer}>Stop</Button>
-                <Button variant='outlined' onClick={resetTimer}>Reset</Button>
+                <Button variant='contained' color='inherit' onClick={startTimer}>Start</Button>
+                <Button variant='contained' color='inherit' onClick={stopTimer}>Stop</Button>
+                <Button variant='contained' color='inherit' onClick={resetTimer}>Reset</Button>
             </div>
         </header>
     </div>

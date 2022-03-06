@@ -37,7 +37,7 @@ const MsgDialog = () => {
 
     return(
         <div>
-        <Button variant="outlined" onClick={handleClickOpen}>
+        <Button variant='contained' color='inherit' onClick={handleClickOpen}>
           Motivate Me!
         </Button>
         <Dialog

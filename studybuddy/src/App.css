@@ -1,3 +1,11 @@
+html{
+  background: url('https://64.media.tumblr.com/821bf6fb956e00922bd11a5f6dab47b8/tumblr_pboqhrprnt1xqkqqwo2_r1_1280.gifv') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 .App {
   text-align: center;
 }
@@ -8,6 +16,8 @@
 }
 
 .App-pomodoro {
+  /* color:white; */
+  text-shadow: 2px 2px 5px rgb(0, 0, 0);
   margin: auto;
   display: flex;
   flex-direction: column;
