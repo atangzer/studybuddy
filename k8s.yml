@@ -1,10 +1,10 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: ${PROJECT_NAME}
+  name: ${PROJECT_NAME}-backend
 spec:
   selector:
-    app: ${PROJECT_NAME}
+    app: ${PROJECT_NAME}-backend
   ports:
   - protocol: TCP
     port: 8080
@@ -14,23 +14,60 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ${PROJECT_NAME}
+  name: ${PROJECT_NAME}-backend
   labels:
-    app: ${PROJECT_NAME}
+    app: ${PROJECT_NAME}-backend
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
-      app: ${PROJECT_NAME}
+      app: ${PROJECT_NAME}-backend
   template:
     metadata:
       labels:
-        app: ${PROJECT_NAME}
+        app: ${PROJECT_NAME}-backend
     spec:
       containers:
-      - name: ${PROJECT_NAME}
-        image: gcr.io/${GOOGLE_PROJECT_ID}/${PROJECT_NAME}
+      - name: ${PROJECT_NAME}-backend
+        image: gcr.io/${GOOGLE_PROJECT_ID}/${BACKEND}
         ports:
         - name: http
           containerPort: 8080
           protocol: TCP
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: ${PROJECT_NAME}-frontend
+spec:
+  selector:
+    app: ${PROJECT_NAME}-frontend
+  ports:
+  - protocol: TCP
+    port: 3000
+    targetPort: 3000
+  type: LoadBalancer
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ${PROJECT_NAME}-frontend
+  labels:
+    app: ${PROJECT_NAME}-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ${PROJECT_NAME}-frontend
+  template:
+    metadata:
+      labels:
+        app: ${PROJECT_NAME}-frontend
+    spec:
+      containers:
+      - name: ${PROJECT_NAME}-frontend
+        image: gcr.io/${GOOGLE_PROJECT_ID}/${FRONTEND}
+        ports:
+        - name: http
+          containerPort: 3000
+          protocol: TCP          
