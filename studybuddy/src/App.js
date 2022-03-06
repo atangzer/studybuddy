@@ -1,28 +1,27 @@
 
 import React, { useState, useEffect } from "react";
 
+import Button from '@mui/material/Button';
+
 import logo from './logo.svg';
 import './App.css';
 import Navbar from "./components/Navbar.js"
 import InputMessage from './components/MessageForm';
 import { getMsg, createMsg } from './services/messageSvc';
+import Message from './components/Message';
 
 const App = () => {
   const [message, setMessage] = useState([]);
 
   const getData = async() => {
     const res = await getMsg();
-    setMessage(res);
+    setMessage(res)
   }
 
   const addMessage = async (msg) => {
     await createMsg(msg);
     await getData();
   }
-
-  useEffect(() => {
-    getData(); 
-  }, [])
 
   return (
     <div className="App">
@@ -32,6 +31,8 @@ const App = () => {
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <InputMessage addMessage={addMessage}/>
+        {/* <button onClick={getData}>Get Message</button> */}
+        <Message />
     </div>
   );
 }
