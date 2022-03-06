@@ -3,20 +3,22 @@ import { Button, List, ListItem, ListItemText, Stack, TextField } from '@mui/mat
 import { FormControl } from '@mui/material';
 import { OutlinedInput } from '@mui/material';
 
-const defaultValues = {newtask: ""}
 
 
-class NewTaskForm extends Component {
-// const NewTaskForm = () => {
 
-    constructor(props) {
-        super()
-        this.state = {
-            [formValues, setFormValues] : useState(defaultValues)
-        }
-    }
+const NewTaskForm = () => {
 
-  handleInput = event => {
+  const defaultValues = {newtask: ""}
+  const [formValues, setFormValues] = useState(defaultValues)
+
+    // constructor = (props) => {
+    //     super()
+    //     this.state = {
+            
+    //     }
+    // }
+
+  const handleInput = event => {
     const { name, value } = event.target
     console.log(event.target)
     setFormValues({
@@ -26,20 +28,19 @@ class NewTaskForm extends Component {
     this.props.onNewTask(event)
   }
 
-  handleSubmit = (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
     console.log(event);
     var i = this.formValues.newtask
     this.props.onNewTask(i)
   };
 
-  addTaskToList =(newtask) => {
+  const addTaskToList =(newtask) => {
     // TaskList.state.tasks.push(newtask) 
     console.log("TASK COULDNT BE ADDED TO LIST")
     this.handleInput(newtask)
   }
 
-  render() {
     return(
     <div>
       <form onSubmit={handleSubmit}>
@@ -47,7 +48,7 @@ class NewTaskForm extends Component {
       <Button variant="contained" color="primary" type="submit">Submit</Button>
       </form>
     </div>)
-  }
+  
  
 }
 

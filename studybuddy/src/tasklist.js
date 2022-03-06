@@ -12,9 +12,9 @@ const defaultValues = {newtask: ""}
 
 
 
-class ListofTasks extends Component {
+const ListofTasks = () => {
 
-  render(){
+
 
     var list =  this.props.tasklist ? this.props.tasklist.map(x => {
               return(
@@ -34,26 +34,25 @@ class ListofTasks extends Component {
         </Stack>
       </div>
     )
-  }
+
 }
 
-export class TaskList extends Component {
-  constructor(props) {
-    super(props)
+const TaskList = () => {
+  // constructor = (props) => {
+  //   super(props)
     
-  }
+  // }
 
-    state = {
+    const state = {
       tasks: ["What", "the", "fuck"]
     }
 
-    updateTaskList = newtask => {
+    const updateTaskList = newtask => {
       var newlist = this.state.tasks
       newlist.push(newtask)
       this.setState({newlist})
     }
 
-  render() {
     return (
       <div><header className="TaskListComponent">{this.props.title}</header> 
         <Stack>
@@ -62,7 +61,7 @@ export class TaskList extends Component {
         </Stack>
       </div>
     )
-  }
+
 }
   
 export default TaskList
