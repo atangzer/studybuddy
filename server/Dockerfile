@@ -8,13 +8,10 @@ WORKDIR /usr/src/app
 
 ENV NODE_ENV development
 
-# Install Dependencies
-COPY package*.json ./
-
-RUN npm install 
-
 # Copy app source code
 COPY . .
+
+RUN npm install 
 
 CMD ["npm","start"]
 

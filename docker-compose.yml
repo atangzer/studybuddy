@@ -8,12 +8,15 @@ services:
       dockerfile: Dockerfile
     image: gcr.io/gleaming-idiom-343203/sb_frontend
     command: npm start
+    environment:
+     - MONGODB_URI=mongodb://mongo:27017/test 
+     - CHOKIDAR_USEPOLLING=true
     depends_on:
       - backend
     ports: 
       - "3000:3000"  
     volumes:
-      - ./client/:/usr/app
+      - ./studybuddy/:/usr/app
       - /usr/app/node_modules
   backend:
     build: 
@@ -22,13 +25,15 @@ services:
     image: gcr.io/gleaming-idiom-343203/sb_backend
     ports:
      - "8080:8080"
+    env_file: ./server/.env.example
     environment:
      - MONGODB_URI=mongodb://mongo:27017/test 
+     - CHOKIDAR_USEPOLLING=true
     links:
      - mongo 
     depends_on: 
      - mongo 
     volumes:
-     - .:/starter
-     - /starter/node_modules
+     - ./server/:/usr/src/app
+     - /usr/src/app/node_modules
      
