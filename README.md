@@ -1,5 +1,7 @@
 # Comfy Pomodoro: Your Study Buddy! 
 
+[Devpost](https://devpost.com/software/comfy-pomodoro)
+
 The pomodoro timer has become a healthy productivity favourite over the past few years! We help bring this to you, adding encouraging feedback to you to keep you working at your best!
 
 Send words of encourage to other users out there, and open up messages from others as well. You also have a cute little fox at the right corner to keep you company while you work!
@@ -38,8 +40,6 @@ docker compose build
 docker compose up
 ```
 Access application at localhost:3000.
-
-Access this application on GCP as well: http://35.202.122.87:3000/ (**Note:** Please run the project on localhost:3000 instead, only the frontend is working at the moment on GCP)
 
 ## Credits
 
